@@ -1,7 +1,12 @@
-import NameForm from './components/NameForm'
-import FocusInput from './components/FocusInput' 
-import SearchableList from './components/SearchableList'
+import Character from './components/Character'
+import { CharacterProvider } from './contexts/CharacterContext'
+import InventoryManager from './components/InventoryManager'
 
-const App = () => <SearchableList />
+const App = () => (
+    <CharacterProvider>
+        <Character />
+        <InventoryManager />  
+    </CharacterProvider>
+)
 
-export default App 
+export default App
